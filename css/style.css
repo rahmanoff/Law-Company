@@ -1,0 +1,585 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+        /* центрируем контент в контейнере */
+        padding: 0 15px;
+    }
+    
+    body {
+        /* font-family: 'PT Serif', serif; */
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #5e5e5e;
+    }
+    
+    .header {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .header__top {
+        background-color: #303030;
+    }
+    
+    .header__btn {
+        float: right;
+        font-size: 16px;
+        line-height: 36px;
+        color: #1b1b1b;
+        background-color: #ffc222;
+        padding: 5px 20px 4px 50px;
+        position: relative;
+    }
+    
+    .header__btn::before {
+        font-family: 'icomoon';
+        /* обязательно прописывает font family, иначе символ не будет выводится */
+        content: "\f0b1";
+        position: absolute;
+        left: 22px;
+        color: #1b1b1b;
+    }
+    
+    .header__contacts:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+    
+    .header__phone,
+    .header__email {
+        color: #cbcacb;
+        letter-spacing: 0.25px;
+        line-height: 45px;
+        position: relative;
+    }
+    
+    .header__phone {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    
+    .header__phone::before {
+        font-family: 'icomoon';
+        /* обязательно прописывает font family, иначе символ не будет выводится */
+        content: "\f095";
+        position: absolute;
+        left: 0;
+        color: #ffc222;
+    }
+    
+    .header__email {
+        padding-left: 24px;
+    }
+    
+    .header__email::before {
+        font-family: 'icomoon';
+        /* обязательно прописывает font family, иначе символ не будет выводится */
+        content: "\f003";
+        position: absolute;
+        left: 0px;
+        color: #ffc222;
+    }
+    
+    .header__content {
+        padding: 34px 0 23px;
+    }
+    
+    .header__content-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .menu li {
+        display: inline-block;
+    }
+    
+    .menu a {
+        color: #323232;
+        font-size: 16px;
+        line-height: 36px;
+        border: 1px solid transparent;
+        padding: 0 16px;
+        transition: all .3s;
+    }
+    
+    .menu a:hover {
+        border: 1px solid #ffc222;
+    }
+    
+    .menu li+li {
+        padding-left: 10px;
+        /* задаем расстояние между пунктами меню */
+    }
+    
+    #modal {
+        display: none;
+    }
+    
+    .slider {
+        background-image: url(../img/slider-back.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
+    }
+    
+    .slider__item-content {
+        text-align: center;
+        padding-top: 110px;
+        max-width: 660px;
+        margin: 0 auto;
+    }
+    
+    .slider__title {
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-size: 30px;
+        line-height: 36px;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+        margin-bottom: 22px;
+    }
+    
+    .slider__text {
+        font-family: 'PT Serif', serif;
+        font-size: 18px;
+        line-height: 24px;
+        color: #d3d2d2;
+        margin-bottom: 50px;
+    }
+    
+    .default-btn {
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        padding: 8px 30px 8px 24px;
+        border: 1px solid #ffc222;
+        border-right-width: 20px;
+        position: relative;
+        outline: none;
+    }
+    
+    .default-btn::after {
+        font-family: 'icomoon';
+        content: "\f105";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12px;
+    }
+    
+    .slider__inner {
+        position: relative;
+    }
+    
+    .slick-btn {
+        position: absolute;
+        top: 70%;
+        z-index: 3;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #fff;
+        cursor: pointer;
+        outline: none;
+        background-color: #ffc222;
+    }
+    
+    .slick-btn.slick-disabled {
+        cursor: default;
+        background-color: transparent;
+    }
+    
+    .slick-btn::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'icomoon';
+        color: #fff;
+    }
+    
+    .slick-next::before {
+        content: "\f105";
+    }
+    
+    .slick-prev::before {
+        content: "\f104";
+    }
+    
+    .slick-next {
+        right: 0;
+    }
+    
+    .slick-prev {
+        left: 0;
+    }
+    
+    .services {
+        padding: 50px 30px;
+    }
+    
+    .services__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    
+    .services__title-box,
+    .form__title-box {
+        max-width: 520px;
+        padding-left: 140px;
+        position: relative;
+    }
+    
+    .services__title-box::before,
+    .form__title-box::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: #ffc222;
+        left: 0;
+        top: 11px;
+    }
+    
+    .services__title,
+    .form__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        color: #212020;
+        margin-bottom: 10px;
+    }
+    
+    .services__text,
+    .form__text {
+        letter-spacing: 0.1px;
+    }
+    
+    .services__btn a {
+        color: #373636;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        padding: 5px 38px;
+        border: 3px solid #e6e6e6;
+        text-align: center;
+    }
+    
+    .services__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .services__item {
+        max-width: 360px;
+        text-align: center;
+        padding: 30px 0px 80px;
+        position: relative;
+        min-height: 375px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
+    }
+    
+    .services__img3 {
+        margin-top: 10px;
+    }
+    
+    .services__item-title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #212020;
+        padding: 24px 0;
+    }
+    
+    .services__item-text {
+        font-family: 'PT Serif', serif;
+        letter-spacing: 0.1px;
+        padding: 0px 30px 30px;
+    }
+    
+    .services__item-btn {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+    }
+    
+    .services__item-btn .default-btn {
+        font-family: 'Roboto', sans-serif;
+        color: #373636;
+        line-height: 24px;
+    }
+    
+    .services__item-btn .default-btn::after {
+        color: #fff;
+    }
+    
+    .services__item-link {
+        font-family: 'Roboto', sans-serif;
+        color: #050505;
+        border-bottom: 1px solid #050505;
+        margin-right: 60px;
+    }
+    
+    .about {
+        background-image: url(../img/about-back.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 300px;
+        background-repeat: no-repeat;
+        padding: 25px 0px 45px 0px;
+    }
+    
+    .about__inner {
+        max-width: 545px;
+        padding-left: 20px;
+    }
+    
+    .about__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        color: #fff;
+        padding: 10px 0 20px;
+    }
+    
+    .about__text {
+        font-family: 'PT Serif', serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: #d3d2d2;
+        letter-spacing: 0.1px;
+        margin-bottom: 30px;
+    }
+    
+    .about__btn.default-btn::after {
+        color: black;
+    }
+    
+    .form {
+        padding-top: 30px;
+    }
+    
+    .form__inner {
+        padding-bottom: 40px;
+        background-image: url(../img/form-girl.png);
+        min-height: 460px;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+    
+    .form__box {
+        max-width: 850px;
+        padding-top: 45px;
+    }
+    
+    .form__box-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .form__box-left {
+        max-width: 260px;
+        width: 100%;
+    }
+    
+    .form__box-right {
+        max-width: 555px;
+        width: 100%;
+    }
+    
+    .form__box-inner label,
+    .form__box-inner input,
+    .form__box-inner textarea {
+        display: block;
+        width: 100%;
+    }
+    
+    .form__box-inner label {
+        font-family: 'Roboto', sans-serif;
+        line-height: 36px;
+        color: #282828;
+    }
+    
+    .form__box-inner input {
+        margin-bottom: 8px;
+        outline: none;
+        height: 40px;
+        border: 1px solid #e6e6e6;
+        padding: 0 10px;
+    }
+    
+    .form__box-inner select {
+        outline: none;
+        padding-left: 17px;
+    }
+    
+    .form__box-inner .jq-selectbox.jqselect {
+        display: block;
+        width: 100%;
+    }
+    
+    .form__box-inner .jq-selectbox__select {
+        height: 40px;
+        border: 1px solid #e6e6e6;
+        padding-left: 17px;
+    }
+    
+    .form__box-inner .jq-selectbox__trigger-arrow::before {
+        font-family: 'icomoon';
+        content: "\f105";
+        position: absolute;
+        right: 17px;
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    .form__box-inner .jq-selectbox__dropdown {
+        width: 100%;
+        margin: 2px 0 0;
+        padding: 0;
+        border: 1px solid #e6e6e6;
+        background: #FFF;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    }
+    
+    .form__box-inner .jq-selectbox li {
+        min-height: 18px;
+        padding: 5px 17px 6px;
+        color: #231F20;
+    }
+    
+    .form__box-inner .jq-selectbox li.selected {
+        background-color: #A3ABB1;
+        color: #FFF;
+    }
+    
+    .form__box-inner .jq-selectbox li:hover {
+        background-color: #ffc222;
+        color: #FFF;
+    }
+    
+    .form__box-inner .jq-selectbox li.disabled {
+        color: #AAA;
+    }
+    
+    .form__box-inner .jq-selectbox li.disabled:hover {
+        background: none;
+    }
+    
+    .form__box-inner .jq-selectbox li.optgroup {
+        font-weight: bold;
+    }
+    
+    .form__box-inner .jq-selectbox li.optgroup:hover {
+        background: none;
+        color: #231F20;
+        cursor: default;
+    }
+    
+    .form__box-inner .jq-selectbox li.option {
+        padding-left: 25px;
+    }
+    
+    .form__box-inner textarea {
+        outline: none;
+        border: 1px solid #e6e6e6;
+        padding: 10px;
+        height: 205px;
+        resize: none;
+        /* Запрет на изменение размеров поля для сообщения */
+        margin-bottom: 47px;
+    }
+    
+    .form__box-inner button {
+        background-color: transparent;
+        color: #282828;
+        line-height: 24px;
+        letter-spacing: .25px;
+        float: right;
+    }
+    
+    .advantages {
+        padding: 55px 0 40px;
+        background-image: url(../img/advantages-back.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 285px;
+    }
+    
+    .advantages__inner {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    
+    .advantages__item {
+        max-width: 360px;
+        padding: 0 20px;
+    }
+    
+    .advantages__title {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        padding: 60px 0 15px;
+        position: relative;
+    }
+    
+    .advantages__title::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #ffc222;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .advantages__title::after {
+        font-family: 'icomoon';
+        font-size: 14px;
+        content: "\f00c";
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .advantages__text {
+        font-family: 'PT Serif', serif;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: .1px;
+        color: #d3d2d2;
+    }
