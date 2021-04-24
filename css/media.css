@@ -1,0 +1,44 @@
+@media(max-width:700px) {
+    .header__contacts {
+        text-align: center;
+    }
+    .header__btn {
+        float: none;
+    }
+    .header__btn-menu {
+        display: block;
+    }
+    .menu ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 25px;
+        z-index: 50;
+    }
+    .menu li {
+        display: block;
+        text-align: center;
+    }
+    .menu a {
+        display: block;
+        background-color: #ffc222;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    .menu li+li {
+        padding-left: 0;
+    }
+}
+
+@media(max-width:382px) {
+    .header__email {
+        padding-right: 30px;
+    }
+}
+
+@media(min-width:700px) {
+    .menu ul {
+        display: block !important;
+    }
+}

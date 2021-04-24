@@ -57,6 +57,11 @@ body {
     color: #1b1b1b;
 }
 
+.header__btn-menu {
+    display: none;
+    font-size: 28px;
+}
+
 .header__contacts:after {
     content: '';
     clear: both;
@@ -794,7 +799,7 @@ body {
     font-size: 12px;
     line-height: 24px;
     letter-spacing: 0.5px;
-    color: #fff;
+    color: #595959;
     text-align: center;
     padding: 8px 0;
 }
