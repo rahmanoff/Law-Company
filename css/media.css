@@ -1,3 +1,9 @@
+@media(max-width:900px) {
+    .slider .slick-btn {
+        display: none !important;
+    }
+}
+
 @media(max-width:700px) {
     .header__contacts {
         text-align: center;
@@ -28,6 +34,18 @@
     }
     .menu li+li {
         padding-left: 0;
+    }
+}
+
+@media(max-width:414px) {
+    .slider__title {
+        font-size: 24px;
+    }
+    .slider__text {
+        font-size: 16px;
+    }
+    .slider__item-content {
+        padding-top: 75px;
     }
 }
 
