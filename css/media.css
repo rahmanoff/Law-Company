@@ -10,6 +10,9 @@
     .form__inner {
         background-image: none;
     }
+    .news {
+        padding-bottom: 40px;
+    }
     .news__inner {
         display: block;
     }
@@ -30,6 +33,19 @@
     .news__images {
         float: left;
         margin-right: 50px;
+    }
+    .footer__info {
+        max-width: 465px;
+        margin-bottom: 25px;
+    }
+}
+
+@media(max-width:1050px) {
+    .footer__inner {
+        display: block;
+    }
+    .footer__map {
+        max-width: 100%;
     }
 }
 

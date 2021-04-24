@@ -721,11 +721,12 @@ body {
 
 .footer__map {
     padding-top: 10px;
+    max-width: 630px;
+    width: 100%;
 }
 
 .footer__map iframe {
-    max-width: 630px;
-    height: 250px;
+    width: 100%;
 }
 
 .footer__inner .header__btn {
