@@ -703,3 +703,5 @@ body {
 .news__slider-inner .slick-disabled::before {
     color: #9e9c9c;
 }
+
+.footer__content {}
