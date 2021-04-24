@@ -592,4 +592,114 @@ body {
 
 .news {
     padding: 55px 0 110px;
+    background-color: #f9f9f9;
+}
+
+.news__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__slider {
+    max-width: 555px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
+    padding: 60px 35px 45px 70px;
+    position: relative;
+}
+
+.news__slider::before {
+    font-family: 'icomoon';
+    content: "\f10e";
+    width: 65px;
+    height: 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffc222;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+}
+
+.news__blog {
+    max-width: 260px;
+    width: 100%;
+}
+
+.news__images {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.news__date {
+    position: absolute;
+    background-color: #ffc222;
+    width: 50px;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 700;
+    top: -1px;
+    left: 10px;
+}
+
+.news__blog-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: .5px;
+    color: #242424;
+    margin-bottom: 19px;
+}
+
+.news__blog-text {
+    letter-spacing: .1px;
+    color: #5e5e5e;
+}
+
+.news__slider-title {
+    max-width: 365px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: .5px;
+    color: #242424;
+    margin-bottom: 15px;
+}
+
+.news__slider-text {
+    letter-spacing: .1px;
+    margin-bottom: 30px;
+}
+
+.news__slider-author {
+    letter-spacing: .1px;
+    color: #212020;
+}
+
+.news__slider-inner .slick-btn {
+    top: auto;
+    bottom: -110px;
+}
+
+.news__slider-inner .slick-next {
+    right: -35px;
+}
+
+.news__slider-inner .slick-prev {
+    right: 20px;
+    left: auto;
+}
+
+.news__slider-inner .slick-disabled {
+    border-color: #dadada;
+}
+
+.news__slider-inner .slick-disabled::before {
+    color: #9e9c9c;
 }
