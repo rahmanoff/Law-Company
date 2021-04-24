@@ -34,6 +34,9 @@
     .services__btn {
         text-align: center;
     }
+    .form {
+        padding-bottom: 25px;
+    }
     .form__box-inner {
         display: block;
     }
@@ -45,6 +48,13 @@
     }
     .form__box-inner .jq-selectbox__select {
         margin-bottom: 10px;
+    }
+    .advantages__inner {
+        display: block;
+    }
+    .advantages__item {
+        max-width: 100%;
+        margin-bottom: 30px;
     }
 }
 
@@ -98,6 +108,9 @@
     }
     .slider__item-content {
         padding-top: 75px;
+    }
+    .advantages__item {
+        padding: 0;
     }
 }
 
